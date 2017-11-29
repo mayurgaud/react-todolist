@@ -18,7 +18,8 @@ export class TasksPage extends Component {
     tasks: PropTypes.instanceOf(List).isRequired,
     undeleteTask: PropTypes.func.isRequired,
     unloadTasks: PropTypes.func.isRequired,
-    updateTask: PropTypes.func.isRequired
+    updateTask: PropTypes.func.isRequired,
+    updateTaskOrdering: PropTypes.func.isRequired
   };
 
   componentWillMount() {
@@ -41,6 +42,7 @@ export class TasksPage extends Component {
             removeTask={this.props.removeTask}
             tasks={this.props.tasks}
             updateTask={this.props.updateTask}
+            updateTaskOrdering={this.props.updateTaskOrdering}
           />
         </div>
 

@@ -1,11 +1,11 @@
 import { List, Record } from 'immutable';
-import { SIGN_OUT_SUCCESS } from 'src/auth/action-types';
 import {
   CREATE_TASK_SUCCESS,
   REMOVE_TASK_SUCCESS,
   FILTER_TASKS,
   LOAD_TASKS_SUCCESS,
-  UPDATE_TASK_SUCCESS
+  UPDATE_TASK_SUCCESS,
+  UPDATE_TASK_ORDERING
 } from './action-types';
 
 
@@ -50,8 +50,14 @@ export function tasksReducer(state = new TasksState(), {payload, type}) {
         })
       });
 
-    case SIGN_OUT_SUCCESS:
-      return new TasksState();
+    case UPDATE_TASK_ORDERING:
+        const olditem = state.list.get(payload.oldIndex);
+        const newlist = state.list.delete(payload.oldIndex).insert(payload.newIndex, olditem);
+        return state.merge({
+            deleted: null,
+            previous: null,
+            list: newlist
+        });
 
     default:
       return state;

@@ -10,7 +10,8 @@ import {
   UNDELETE_TASK_ERROR,
   UNLOAD_TASKS_SUCCESS,
   UPDATE_TASK_ERROR,
-  UPDATE_TASK_SUCCESS
+  UPDATE_TASK_SUCCESS,
+  UPDATE_TASK_ORDERING
 } from './action-types';
 
 
@@ -120,4 +121,11 @@ export function unloadTasks() {
   return {
     type: UNLOAD_TASKS_SUCCESS
   };
+}
+
+export function updateTaskOrdering(data) {
+    return {
+        type: UPDATE_TASK_ORDERING,
+        payload: data
+    };
 }
