@@ -20,6 +20,16 @@
   border-bottom: 1px dotted #ccc;
 }
 
+.cell-sort-element {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.listWrapperSortable {
+  visibility: visible !important;
+  opacity: 1 !important;
+  list-style-type: none;
+}
 
 //=====================================
 //  Cells

@@ -44,6 +44,23 @@ export class FirebaseList {
     });
   }
 
+  ordering(oldTask, targetTask, oldKey, newKey) {
+    console.log('##oldKey', oldKey);
+    console.log('##newKey', newKey);
+    console.log('##oldTask', oldTask);
+    console.log('##targetTask', targetTask);
+
+    let oldData = firebaseDb.ref(`${this._path}/${oldKey}`)
+    console.log('##firebaseDb toJSON', oldData.toJSON());
+    console.log('##firebaseDb val', oldData.val);
+
+    return new Promise((resolve, reject) => {
+        firebaseDb.ref(`${this._path}/${oldKey}`)
+            .update(oldTask, error => error ? reject(error) : resolve());
+    });
+      // .remove(error => error ? reject(error) : resolve());
+  }
+
   subscribe(emit) {
     let ref = firebaseDb.ref(this._path);
     let initialized = false;
