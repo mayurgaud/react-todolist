@@ -19,7 +19,8 @@ function TaskList({removeTask, tasks, updateTask, updateTaskOrdering}) {
     });
 
     const onSortEnd = ({oldIndex, newIndex}) => {
-        updateTaskOrdering({oldTask: tasks.get(oldIndex), targetTask: tasks.get(newIndex), oldIndex, newIndex});
+        updateTaskOrdering({sourceTask: tasks.get(oldIndex).toJS(), targetTask: tasks.get(newIndex).toJS(),
+            sourceIndex: oldIndex, targetIndex: newIndex});
     };
 
     return (

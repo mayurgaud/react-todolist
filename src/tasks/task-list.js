@@ -7,6 +7,5 @@ export const taskList = new FirebaseList({
   onAdd: taskActions.createTaskSuccess,
   onChange: taskActions.updateTaskSuccess,
   onLoad: taskActions.loadTasksSuccess,
-  onRemove: taskActions.removeTaskSuccess,
-  onOrdering: taskActions.updateTaskOrdering,
+  onRemove: taskActions.removeTaskSuccess
 }, Task);

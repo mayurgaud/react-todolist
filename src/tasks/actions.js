@@ -124,6 +124,14 @@ export function unloadTasks() {
 }
 
 export function updateTaskOrdering(data) {
+  return dispatch => {
+    taskList.ordering(data.sourceTask, data.targetTask)
+      //.then(response => dispatch(updateTaskOrderingSuccess(data)));
+  };
+}
+
+
+export function updateTaskOrderingSuccess(data) {
   return {
     type: UPDATE_TASK_ORDERING,
     payload: data
