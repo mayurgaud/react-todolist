@@ -107,7 +107,7 @@ export class TaskItem extends Component {
 
         <div className="cell">
           <Button
-            className={classNames('btn--icon', 'task-item__button', {'hide': editing})}
+            className={classNames('btn--icon', 'task-item__button', 'btn-border-none', {'hide': editing})}
             onClick={this.edit}>
             <Icon name="mode_edit"/>
           </Button>
@@ -117,7 +117,7 @@ export class TaskItem extends Component {
             <Icon name="clear"/>
           </Button>
           <Button
-            className={classNames('btn--icon', 'task-item__button', {'hide': editing})}
+            className={classNames('btn--icon', 'task-item__button', 'btn-border-none', {'hide': editing})}
             onClick={this.remove}>
             <Icon name="delete"/>
           </Button>

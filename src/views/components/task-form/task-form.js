@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Button from '../button';
+import Icon from '../icon';
 
 import './task-form.css';
 
@@ -41,18 +44,27 @@ export class TaskForm extends Component {
   render() {
     return (
       <form className="task-form" onSubmit={this.handleSubmit} noValidate>
-        <input
-          autoComplete="off"
-          autoFocus
-          className="task-form__input"
-          maxLength="64"
-          onChange={this.handleChange}
-          onKeyUp={this.handleKeyUp}
-          placeholder="What needs to be done?"
-          ref={e => this.titleInput = e}
-          type="text"
-          value={this.state.title}
-        />
+        <div className="task-title-wrapper">
+          <div className="task-manager-title">Task Manager</div>
+          <div className="add-detail-icon"><span><Icon name="add"/></span></div>
+        </div>
+        <div>
+          <button className={classNames('btn--icon btn-border-none')}>
+            <Icon name="add"/>
+          </button>
+          <input
+            autoComplete="off"
+            autoFocus
+            className="task-form__input"
+            maxLength="64"
+            onChange={this.handleChange}
+            onKeyUp={this.handleKeyUp}
+            placeholder="What needs to be done?"
+            ref={e => this.titleInput = e}
+            type="text"
+            value={this.state.title}
+          />
+        </div>
       </form>
     );
   }

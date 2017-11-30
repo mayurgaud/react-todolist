@@ -24,7 +24,6 @@ function TaskList({removeTask, tasks, updateTask, updateTaskOrdering}) {
 
   return (
     <div className="task-list">
-      {/*{taskItems}*/}
       <SortableList items={taskItems} onSortEnd={onSortEnd}/>
     </div>
   );
