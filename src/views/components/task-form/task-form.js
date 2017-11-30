@@ -20,6 +20,7 @@ export class TaskForm extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.focusInput = this.focusInput.bind(this);
   }
 
   clearInput() {
@@ -34,6 +35,10 @@ export class TaskForm extends Component {
     if (event.keyCode === 27) this.clearInput();
   }
 
+  focusInput() {
+    this.titleInput.focus();
+  }
+
   handleSubmit(event) {
     event.preventDefault();
     const title = this.state.title.trim();
@@ -46,7 +51,9 @@ export class TaskForm extends Component {
       <form className="task-form" onSubmit={this.handleSubmit} noValidate>
         <div className="task-title-wrapper">
           <div className="task-manager-title">Task Manager</div>
-          <div className="add-detail-icon"><span><Icon name="add"/></span></div>
+          <div className="add-detail-icon">
+            <span className="add-new-task" onClick={this.focusInput}><Icon name="add"/></span>
+          </div>
         </div>
         <div>
           <button className={classNames('btn--icon btn-border-none')}>

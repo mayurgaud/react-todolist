@@ -165,6 +165,9 @@ a {
       font-size: 40px;
       color: #a6a6a6; }
 
+.add-new-task {
+  cursor: pointer; }
+
 .g-row {
   background: #fff; }
   .g-row .g-col {
