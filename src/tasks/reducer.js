@@ -51,13 +51,7 @@ export function tasksReducer(state = new TasksState(), {payload, type}) {
       });
 
     case UPDATE_TASK_ORDERING:
-      const sourceTask = state.list.get(payload.sourceIndex);
-      const newTaskList = state.list.delete(payload.sourceIndex).insert(payload.targetIndex, sourceTask);
-      return state.merge({
-        deleted: null,
-        previous: null,
-        list: newTaskList
-      });
+      return state;
 
     default:
       return state;
