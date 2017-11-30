@@ -1,13 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 import TasksPage from '../pages/tasks';
 
 
 const App = () => (
   <div>
     <main>
-      <TasksPage />
+      <TasksPage/>
     </main>
   </div>
 );

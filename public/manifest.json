@@ -1,6 +1,6 @@
 {
-  "short_name": "Todo React Redux",
-  "name": "Todo app with React, React Redux, and Firebase",
+  "short_name": "Todo list",
+  "name": "Todo list app with React, React Redux, and Firebase",
   "icons": [
     {
       "src": "favicon.ico",

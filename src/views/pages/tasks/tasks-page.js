@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { List } from 'immutable';
+import React, {Component} from 'react';
+import {List} from 'immutable';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
+import {connect} from 'react-redux';
+import {createSelector} from 'reselect';
 
-import { getTaskFilter, getVisibleTasks, tasksActions } from 'src/tasks';
+import {getTaskFilter, getVisibleTasks, tasksActions} from 'src/tasks';
 import TaskForm from '../../components/task-form';
 import TaskList from '../../components/task-list';
 
@@ -34,7 +34,7 @@ export class TasksPage extends Component {
     return (
       <div className="g-row">
         <div className="g-col">
-          <TaskForm handleSubmit={this.props.createTask} />
+          <TaskForm handleSubmit={this.props.createTask}/>
         </div>
 
         <div className="g-col">

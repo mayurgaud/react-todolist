@@ -1,5 +1,5 @@
-import { getDeletedTask } from './selectors';
-import { taskList } from './task-list';
+import {getDeletedTask} from './selectors';
+import {taskList} from './task-list';
 import {
   CREATE_TASK_ERROR,
   CREATE_TASK_SUCCESS,
@@ -124,8 +124,8 @@ export function unloadTasks() {
 }
 
 export function updateTaskOrdering(data) {
-    return {
-        type: UPDATE_TASK_ORDERING,
-        payload: data
-    };
+  return {
+    type: UPDATE_TASK_ORDERING,
+    payload: data
+  };
 }

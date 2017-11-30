@@ -1,4 +1,4 @@
-import { List, Record } from 'immutable';
+import {List, Record} from 'immutable';
 import {
   CREATE_TASK_SUCCESS,
   REMOVE_TASK_SUCCESS,
@@ -24,8 +24,8 @@ export function tasksReducer(state = new TasksState(), {payload, type}) {
         deleted: null,
         previous: null,
         list: state.deleted && state.deleted.key === payload.key ?
-              state.previous :
-              state.list.unshift(payload)
+          state.previous :
+          state.list.unshift(payload)
       });
 
     case REMOVE_TASK_SUCCESS:
@@ -51,13 +51,13 @@ export function tasksReducer(state = new TasksState(), {payload, type}) {
       });
 
     case UPDATE_TASK_ORDERING:
-        const olditem = state.list.get(payload.oldIndex);
-        const newlist = state.list.delete(payload.oldIndex).insert(payload.newIndex, olditem);
-        return state.merge({
-            deleted: null,
-            previous: null,
-            list: newlist
-        });
+      const olditem = state.list.get(payload.oldIndex);
+      const newlist = state.list.delete(payload.oldIndex).insert(payload.newIndex, olditem);
+      return state.merge({
+        deleted: null,
+        previous: null,
+        list: newlist
+      });
 
     default:
       return state;
