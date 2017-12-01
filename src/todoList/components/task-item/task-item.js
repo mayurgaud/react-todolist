@@ -19,6 +19,9 @@ export class TaskItem extends Component {
     this.toggleStatus = this.toggleStatus.bind(this);
   }
 
+  /**
+   * Edit the task
+   */
   edit() {
     this.setState({editing: true});
   }
@@ -32,10 +35,18 @@ export class TaskItem extends Component {
     }
   }
 
+  /**
+   * Remove the task
+   */
   remove() {
     this.props.removeTask(this.props.task);
   }
 
+  /**
+   * Create a new task
+   *
+   * @param event
+   */
   save(event) {
     if (this.state.editing) {
       const {task} = this.props;
@@ -49,10 +60,16 @@ export class TaskItem extends Component {
     }
   }
 
+  /**
+   * Change the editing state
+   */
   stopEditing() {
     this.setState({editing: false});
   }
 
+  /**
+   * Change the task completed status
+   */
   toggleStatus() {
     const {task} = this.props;
     this.props.updateTask(task, {completed: !task.completed});

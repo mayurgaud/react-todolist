@@ -21,6 +21,9 @@ export class TaskForm extends Component {
     this.focusInput = this.focusInput.bind(this);
   }
 
+  /**
+   * Clear the task input field
+   */
   clearInput() {
     this.setState({title: ''});
   }
@@ -37,6 +40,11 @@ export class TaskForm extends Component {
     this.titleInput.focus();
   }
 
+  /**
+   * Submit the create task
+   *
+   * @param event
+   */
   handleSubmit(event) {
     event.preventDefault();
     const title = this.state.title.trim();
