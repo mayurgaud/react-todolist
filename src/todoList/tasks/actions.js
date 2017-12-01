@@ -1,4 +1,3 @@
-import {getDeletedTask} from './selectors';
 import {taskList} from './task-list';
 import {
   CREATE_TASK_ERROR,
@@ -7,7 +6,6 @@ import {
   REMOVE_TASK_SUCCESS,
   FILTER_TASKS,
   LOAD_TASKS_SUCCESS,
-  UNDELETE_TASK_ERROR,
   UNLOAD_TASKS_SUCCESS,
   UPDATE_TASK_ERROR,
   UPDATE_TASK_SUCCESS,
@@ -54,23 +52,6 @@ export function removeTaskSuccess(task) {
   return {
     type: REMOVE_TASK_SUCCESS,
     payload: task
-  };
-}
-
-export function undeleteTask() {
-  return (dispatch, getState) => {
-    const task = getDeletedTask(getState());
-    if (task) {
-      taskList.set(task.key, {completed: task.completed, title: task.title})
-        .catch(error => dispatch(undeleteTaskError(error)));
-    }
-  };
-}
-
-export function undeleteTaskError(error) {
-  return {
-    type: UNDELETE_TASK_ERROR,
-    payload: error
   };
 }
 

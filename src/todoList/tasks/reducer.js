@@ -49,8 +49,6 @@ export function tasksReducer(state = new TasksState(), {payload, type}) {
       });
 
     case UPDATE_TASK_ORDERING:
-      return state;
-
     default:
       return state;
   }

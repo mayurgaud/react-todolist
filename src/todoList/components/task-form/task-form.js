@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Button from '../../../views/components/button/index';
 import Icon from '../../../views/components/icon/index';
-
 import './task-form.css';
-
 
 export class TaskForm extends Component {
   static propTypes = {
@@ -56,9 +54,9 @@ export class TaskForm extends Component {
           </div>
         </div>
         <div>
-          <button className={classNames('btn--icon btn-border-none')}>
+          <Button className={classNames('btn--icon btn-border-none')}>
             <Icon name="add"/>
-          </button>
+          </Button>
           <input
             autoComplete="off"
             autoFocus
@@ -76,6 +74,5 @@ export class TaskForm extends Component {
     );
   }
 }
-
 
 export default TaskForm;

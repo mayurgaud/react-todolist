@@ -35,7 +35,6 @@ function TaskList({removeTask, tasks, updateTask, updateTaskOrdering}) {
   );
 }
 
-
 const SortableItem = SortableElement(({value}) =>
   <li className="listWrapperSortable">{value}</li>
 );
@@ -49,7 +48,6 @@ const SortableList = SortableContainer(({taskItems}) => {
     </ul>
   );
 });
-
 
 TaskList.propTypes = {
   removeTask: PropTypes.func.isRequired,

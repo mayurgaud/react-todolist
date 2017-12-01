@@ -8,15 +8,12 @@ import {getTaskFilter, getVisibleTasks, tasksActions} from 'src/todoList/tasks/i
 import TaskForm from '../../components/task-form/index';
 import TaskList from '../../components/task-list/index';
 
-
 export class TasksPage extends Component {
   static propTypes = {
     createTask: PropTypes.func.isRequired,
-    filterTasks: PropTypes.func.isRequired,
     loadTasks: PropTypes.func.isRequired,
     removeTask: PropTypes.func.isRequired,
     tasks: PropTypes.instanceOf(List).isRequired,
-    undeleteTask: PropTypes.func.isRequired,
     unloadTasks: PropTypes.func.isRequired,
     updateTask: PropTypes.func.isRequired,
     updateTaskOrdering: PropTypes.func.isRequired

@@ -12,10 +12,6 @@ export function getTaskFilter(state) {
   return getTasks(state).filter;
 }
 
-export function getDeletedTask(state) {
-  return getTasks(state).deleted;
-}
-
 //=====================================
 //  MEMOIZED SELECTORS
 //-------------------------------------
