@@ -8,14 +8,12 @@ import {
   UPDATE_TASK_ORDERING
 } from './action-types';
 
-
 export const TasksState = new Record({
   deleted: null,
   filter: '',
   list: new List(),
   previous: null
 });
-
 
 export function tasksReducer(state = new TasksState(), {payload, type}) {
   switch (type) {

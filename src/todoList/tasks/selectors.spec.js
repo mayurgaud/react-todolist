@@ -3,7 +3,6 @@ import {TasksState} from './reducer';
 import {getVisibleTasks} from './selectors';
 import {Task} from './task';
 
-
 describe('Tasks selectors', () => {
   let tasks;
 
@@ -15,7 +14,6 @@ describe('Tasks selectors', () => {
       ])
     });
   });
-
 
   describe('getVisibleTasks()', () => {
     it('should return list of all tasks', () => {
