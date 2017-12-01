@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import {SortableElement} from 'react-sortable-hoc';
 import Button from '../../../views/components/button/index';
 import Icon from '../../../views/components/icon/index';
 
@@ -78,20 +77,12 @@ export class TaskItem extends Component {
 
     render() {
         const {editing} = this.state;
-        const {task, taskKey} = this.props;
+        const {task} = this.props;
 
         let containerClasses = classNames('task-item', {
             'task-item--completed': task.completed,
             'task-item--editing': editing
         });
-
-        const draggableArea = (
-            <div className="cell cell-sort-element">
-                <div className="task-item__title" tabIndex="0">
-                    {task.title}
-                </div>
-            </div>
-        );
 
         return (
             <div className={containerClasses} tabIndex="0">
@@ -109,7 +100,11 @@ export class TaskItem extends Component {
                 { editing ? (
                     <div className="cell">{this.renderTitleInput(task)}</div>
                 ) : (
-                    <SortableTask key={`task-${taskKey}`} index={taskKey} value={draggableArea}/>
+                    <div className="cell cell-sort-element">
+                        <div className="task-item__title" tabIndex="0">
+                            <span>{task.title}</span>
+                        </div>
+                    </div>
                 )}
 
                 <div className="cell">
@@ -133,14 +128,6 @@ export class TaskItem extends Component {
         );
     }
 }
-
-const SortableTask = SortableElement(({value}) =>
-    <div className="cell cell-sort-element">
-        <div className="task-item__title" tabIndex="0">
-            <span style={{listStyleType: 'none'}}>{value}</span>
-        </div>
-    </div>
-);
 
 TaskItem.propTypes = {
     removeTask: PropTypes.func.isRequired,
