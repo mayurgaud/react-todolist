@@ -66,7 +66,7 @@ export class TaskForm extends Component {
             maxLength="64"
             onChange={this.handleChange}
             onKeyUp={this.handleKeyUp}
-            placeholder="What needs to be done?"
+            placeholder="Add your task here"
             ref={e => this.titleInput = e}
             type="text"
             value={this.state.title}

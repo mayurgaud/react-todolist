@@ -2,7 +2,14 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-
+/**
+ * Reusable icon html
+ *
+ * @param className
+ * @param name
+ * @returns {HTML}
+ * @constructor
+ */
 const Icon = ({className, name}) => {
   const cssClasses = classNames('material-icons', className);
   return <span className={cssClasses}>{name}</span>;

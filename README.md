@@ -1,20 +1,16 @@
-# Todo app with Create React App, React Redux, and Firebase
-A simple Todo app example with **undelete** capability — built with [Create React App](https://github.com/facebookincubator/create-react-app), [React Redux](https://github.com/reactjs/react-redux), and [Firebase](https://firebase.google.com/).
+# Todo list challenge
+Todo list app — built with [Create React App](https://github.com/facebookincubator/create-react-app), [React Redux](https://github.com/reactjs/react-redux), and [Firebase](https://firebase.google.com/).
 
 Try the demo at https://todo-react-redux.firebaseapp.com. 
-
-A version of this app built with [redux-saga middleware](https://github.com/yelouafi/redux-saga) is available [here](https://github.com/r-park/todo-redux-saga).
-
 
 ## Stack
 
 - Create React App
 - React Redux
-- React Router
 - React Router Redux
 - Redux Thunk
 - Redux Devtools Extension for Chrome
-- Firebase SDK with OAuth authentication
+- Firebase SDK
 - Immutable
 - Reselect
 - SASS
@@ -24,17 +20,11 @@ Quick Start
 -----------
 
 ```shell
-$ git clone https://github.com/r-park/todo-react-redux.git
-$ cd todo-react-redux
+$ git clone 
+$ cd 
 $ npm install
 $ npm start
 ```
-
-## Deploying to Firebase
-#### Prerequisites:
-- Create a free Firebase account at https://firebase.google.com
-- Create a project from your [Firebase account console](https://console.firebase.google.com)
-- Configure the authentication providers for your Firebase project from your Firebase account console
 
 #### Configure this app with your project-specific details:
 ```json
@@ -56,19 +46,6 @@ export const firebaseConfig = {
   databaseURL: 'https://your-project-id.firebaseio.com',
   storageBucket: 'your-project-id.appspot.com'
 };
-```
-
-#### Install firebase-tools:
-```shell
-$ npm install -g firebase-tools
-```
-
-#### Build and deploy the app:
-```shell
-$ npm run build
-$ firebase login
-$ firebase use default
-$ firebase deploy
 ```
 
 
