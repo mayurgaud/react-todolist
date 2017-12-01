@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import {SortableElement} from 'react-sortable-hoc';
-import Button from '../button';
-import Icon from '../icon';
+import Button from '../../../views/components/button/index';
+import Icon from '../../../views/components/icon/index';
 
 import './task-item.css';
 

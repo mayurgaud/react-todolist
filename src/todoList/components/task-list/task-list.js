@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import TaskItem from '../task-item/task-item';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 
-
 function TaskList({removeTask, tasks, updateTask, updateTaskOrdering}) {
   const taskItems = tasks.map((task, index) => {
     return (

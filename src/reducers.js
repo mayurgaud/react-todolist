@@ -1,6 +1,6 @@
 import {routerReducer} from 'react-router-redux';
 import {combineReducers} from 'redux';
-import {tasksReducer} from './tasks';
+import {tasksReducer} from './todoList/tasks';
 
 
 export default combineReducers({

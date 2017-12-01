@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {createSelector} from 'reselect';
 
-import {getTaskFilter, getVisibleTasks, tasksActions} from 'src/tasks';
-import TaskForm from '../../components/task-form';
-import TaskList from '../../components/task-list';
+import {getTaskFilter, getVisibleTasks, tasksActions} from 'src/todoList/tasks/index';
+import TaskForm from '../../components/task-form/index';
+import TaskList from '../../components/task-list/index';
 
 
 export class TasksPage extends Component {

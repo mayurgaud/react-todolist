@@ -1,8 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import TasksPage from '../pages/tasks';
-
+import TasksPage from '../../todoList/pages/tasks';
 
 const App = () => (
   <div>
@@ -18,6 +17,5 @@ const App = () => (
 
 
 export default withRouter(
-  connect(
-  )(App)
+  connect()(App)
 );

@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Button from '../button';
-import Icon from '../icon';
+import Button from '../../../views/components/button/index';
+import Icon from '../../../views/components/icon/index';
 
 import './task-form.css';
 
